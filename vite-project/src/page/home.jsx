@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Menu, X, ChevronRight, BarChart3, TrendingUp, Database, Code } from 'lucide-react';
 
-export default function Portfolio() {
+export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const scrollToSection = (id) => {
