@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certified By Section</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 60px 20px;
+        }
+
+        .certified-section {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .section-header::before,
+        .section-header::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 30%;
+            height: 2px;
+            background-color: #333;
+        }
+
+        .section-header::before {
+            left: 0;
+        }
+
+        .section-header::after {
+            right: 0;
+        }
+
+        .section-header h2 {
+            font-size: 32px;
+            font-weight: bold;
+            color: #333;
+            display: inline-block;
+            padding: 0 20px;
+        }
+
+        .logos-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .logo-item {
+            flex: 1;
+            min-width: 150px;
+            max-width: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+
+        .logo-item:hover {
+            transform: scale(1.1);
+        }
+
+        .logo-item img {
+            max-width: 100%;
+            height: auto;
+            filter: grayscale(0%);
+            transition: filter 0.3s ease;
+        }
+
+        .logo-item:hover img {
+            filter: grayscale(0%) brightness(1.1);
+        }
+
+        @media (max-width: 1024px) {
+            .logos-container {
+                gap: 30px;
+            }
+
+            .logo-item {
+                min-width: 120px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section-header::before,
+            .section-header::after {
+                width: 20%;
+            }
+
+            .section-header h2 {
+                font-size: 24px;
+            }
+
+            .logos-container {
+                justify-content: center;
+                gap: 30px;
+            }
+
+            .logo-item {
+                flex: 0 0 calc(50% - 15px);
+                min-width: auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .section-header::before,
+            .section-header::after {
+                width: 15%;
+            }
+
+            .logo-item {
+                flex: 0 0 calc(50% - 10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="certified-section">
+        <div class="section-header">
+            <h2>Certified By</h2>
+        </div>
+
+        <div class="logos-container">
+            <div class="logo-item">
+                <img src="https://cdn.shopify.com/s/files/1/0609/0096/6459/files/Untitled_design_47_185x_1d69bc84-8c3f-4cb3-b4d6-32e8ed3dafef.jpg?v=1758815485" alt="DLC Certified">
+            </div>
+
+            <div class="logo-item">
+                <img src="https://cdn.shopify.com/s/files/1/0609/0096/6459/files/Untitled_design_48_185x_8fd28285-b9f1-4e02-9b84-c0ed642b432e.jpg?v=1758815485" alt="UL Classified">
+            </div>
+
+            <div class="logo-item">
+                <img src="https://cdn.shopify.com/s/files/1/0609/0096/6459/files/Untitled_design_49_185x_d9334b4e-d7ef-412b-8303-5e34156515b8.jpg?v=1758815485" alt="RoHS Compliant">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
